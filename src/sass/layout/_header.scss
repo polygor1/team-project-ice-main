@@ -1,0 +1,227 @@
+.page-header {
+  background-color: $bg-color-header;
+}
+
+.page-header__nav {
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+}
+
+.page-header__logo {
+  z-index: 5;
+}
+
+.page-header__nav--list {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+  }
+}
+
+.page-header__nav--item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.page-header__nav--link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.313;
+  color: $primary-white-color;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.mobile-open {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 5;
+  @media screen and (min-width: 1280px) {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-button {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    width: 160px;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    background-color: $primary-white-color;
+    cursor: pointer;
+    padding-left: 40.5px;
+    padding-right: 36px;
+    &:hover,
+    &:focus {
+      background: #ecebeb;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 0;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-radial-gradient(
+    circle,
+    #ffa5ba,
+    #ffa5ba 30px,
+    #ffb8ca 0,
+    #ffb8ca 60px
+  );
+  opacity: 1;
+  overflow-y: auto;
+  z-index: 2500;
+}
+
+.backdrop.closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 650px;
+  max-height: 650px;
+  width: 94%;
+  border-radius: 4px;
+  padding: 30px 15px;
+  background-color: $bg-color-mob-menu;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 44px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  margin-bottom: 15px;
+}
+
+.modal-close__button {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  top: 14px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-close__icon {
+  fill: $primary-white-color;
+}
+
+.buying__list {
+  display: flex;
+  margin-bottom: 35px;
+  list-style: none;
+}
+
+.buying__item {
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $accent-color;
+  }
+}
+
+.modal-buy__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  background-color: $primary-white-color;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #ecebeb;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-buy__text {
+  font-weight: 700;
+  line-height: 1.31;
+  color: $accent-color;
+}
+
+.touch-transform {
+  transition-property: color, fill, background-color, border, box-shadow, opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,30 @@
+
+// Стили для МОРОЖЕНКА
+
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixin';
+@import './utils/placeholder';
+
+@import './base/section';
+@import './base/container';
+@import './base/reset';
+
+@import './components/logo';
+@import './components/navigation';
+@import './components/button';
+@import './components/title';
+@import './components/social-icons';
+
+@import './layout/hero';
+@import './layout/header';
+@import './layout/mobile-menu';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+
+// Стили для МОРОЖЕНКА
