@@ -377,7 +377,6 @@
   text-shadow: 1px 1px 0.3em #860022, 2px 2px 2em #ff004090;
 }
 
-
 #open-block-2 .open-block-inner {
   left: 100%;
   top: 0%;
@@ -430,8 +429,8 @@
   & .mobile-close__icon {
     width: 24px;
     height: 24px;
-    transform: rotateZ(90deg);
-    transition-duration: 1500ms;
+    transform: rotateZ(360deg);
+    transition-duration: 3000ms;
     animation: btn 2000ms linear infinite;
   }
 }
